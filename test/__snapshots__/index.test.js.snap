@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add flow comments 1`] = `
+"// @flow
+import type { HOGE_TYPE } from './unknown';
+
+export const HOGE: HOGE_TYPE = 'hoge/HOGE_ACTION';"
+`;
+
+exports[`add flow comments when exits flow block comments 1`] = `
+"// @flow
+import type { HOGE_TYPE, FUGA_TYPE } from './unknown';
+
+export const HOGE: HOGE_TYPE = 'hoge/HOGE_ACTION';
+export const FUGA: FUGA_TYPE = 'fuga/FUGA_ACTION';"
+`;
+
+exports[`add flow comments when exits flow comments 1`] = `
+"// @flow
+import type { HOGE_TYPE, FUGA_TYPE } from './unknown';
+
+export const HOGE: HOGE_TYPE = 'hoge/HOGE_ACTION';
+export const FUGA: FUGA_TYPE = 'fuga/FUGA_ACTION';"
+`;
+
+exports[`opts.filename 1`] = `
+"// @flow
+import type { HOGE_TYPE, FUGA_TYPE } from './actionTypes';
+
+export const HOGE: HOGE_TYPE = 'hoge/HOGE_ACTION';
+export const FUGA: FUGA_TYPE = 'fuga/FUGA_ACTION';"
+`;
+
+exports[`with extra 1`] = `
+"// @flow
+import type { HOGE_TYPE, FUGA_TYPE } from './unknown';
+
+export const HOGE: HOGE_TYPE = 'hoge/HOGE_ACTION';
+export const FUGA: FUGA_TYPE = 'fuga/FUGA_ACTION';"
+`;

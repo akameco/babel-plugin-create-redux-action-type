@@ -1,0 +1,52 @@
+{
+  "name": "babel-plugin-create-redux-action-type",
+  "version": "0.0.0",
+  "description": "create redux action type constants",
+  "license": "MIT",
+  "repository": "akameco/babel-plugin-create-redux-action-type",
+  "author": {
+    "name": "akameco",
+    "email": "akameco.t@gmail.com",
+    "url": "akameco.github.io"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "lint": "eslint src",
+    "test": "npm run lint && jest",
+    "test:watch": "jest --watch"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib/index.js"
+  ],
+  "keywords": [
+    "babel",
+    "redux",
+    "action",
+    "babel-plugin",
+    "plugin",
+    "flow",
+    "flowtype",
+    "action-type",
+    "redux-action"
+  ],
+  "dependencies": {
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-template": "^6.24.1",
+    "babel-types": "^6.24.1"
+  },
+  "devDependencies": {
+    "ast-pretty-print": "^1.2.1",
+    "babel-core": "^6.24.1",
+    "babel-jest": "^20.0.3",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^3.19.0",
+    "eslint-config-precure": "^0.5.1",
+    "flow-bin": "^0.47.0",
+    "jest": "^20.0.4"
+  }
+}
