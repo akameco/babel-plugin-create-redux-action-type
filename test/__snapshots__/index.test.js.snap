@@ -41,7 +41,11 @@ export const FUGA: FUGA_TYPE = 'fuga/FUGA_ACTION';"
 
 exports[`real world 1`] = `
 "// @flow
-import type './actionTypes';"
+import type { ADD_HOGE_TYPE, DELETE_HOGE_TYPE, EDIT_HOGE_TYPE } from './actionTypes';
+
+export const ADD_HOGE: ADD_HOGE_TYPE = 'Hoge/ADD';
+export const DELETE_HOGE: DELETE_HOGE_TYPE = 'Hoge/DELETE';
+export const EDIT_HOGE: EDIT_HOGE_TYPE = 'Hoge/EDIT';"
 `;
 
 exports[`with extra 1`] = `

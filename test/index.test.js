@@ -77,10 +77,13 @@ type Action = { +type: HOGE_TYPE | HUGA_TYPE }
 test('real world', () => {
   const input = `
 // @flow
-export type ADD_HOGE = 'Hoge/ADD_HOGE'
-export type EDIT_HOGE = 'Hoge/EDIT_HOGE'
+export type ADD_HOGE_TYPE = 'Hoge/ADD'
+export type DELETE_HOGE_TYPE = 'Hoge/DELETE'
+export type EDIT_HOGE_TYPE = 'Hoge/EDIT'
 
-export type Action = { +type: ADD_HOGE | EDIT_HOGE }
+export type Action =
+  | {| +type: ADD_HOGE_TYPE | EDIT_HOGE_TYPE |}
+  | {| +type: DELETE_HOGE_TYPE, +id: number |}
   `
   expect(transformCode(input, { filename: 'actionTypes' })).toMatchSnapshot()
 })
