@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-create-redux-action-type",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "create redux action type constants",
   "license": "MIT",
   "repository": "akameco/babel-plugin-create-redux-action-type",
