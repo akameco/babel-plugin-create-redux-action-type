@@ -23,12 +23,25 @@ export const HOGE: HOGE_TYPE = 'hoge/HOGE_ACTION';
 export const FUGA: FUGA_TYPE = 'fuga/FUGA_ACTION';"
 `;
 
+exports[`export 1`] = `
+"// @flow
+import type { HOGE_TYPE, FUGA_TYPE } from './actionTypes';
+
+export const HOGE: HOGE_TYPE = 'hoge/HOGE_ACTION';
+export const FUGA: FUGA_TYPE = 'fuga/FUGA_ACTION';"
+`;
+
 exports[`opts.filename 1`] = `
 "// @flow
 import type { HOGE_TYPE, FUGA_TYPE } from './actionTypes';
 
 export const HOGE: HOGE_TYPE = 'hoge/HOGE_ACTION';
 export const FUGA: FUGA_TYPE = 'fuga/FUGA_ACTION';"
+`;
+
+exports[`real world 1`] = `
+"// @flow
+import type './actionTypes';"
 `;
 
 exports[`with extra 1`] = `
