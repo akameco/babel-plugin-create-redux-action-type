@@ -4,15 +4,41 @@
 
 
 ## Install
+
+#### yarn
+
 ```
 $ yarn add --dev babel-plugin-create-redux-action-type
 ```
 
-or
+#### npm
 
 ```
 $ npm install --save-dev babel-plugin-create-redux-action-type
 ```
+
+## Example
+
+In:
+
+```js
+/* @flow */
+type HOGE_TYPE = 'hoge/HOGE_ACTION'
+type FUGA_TYPE = 'fuga/FUGA_ACTION'
+
+type Action = { +type: HOGE_TYPE | HUGA_TYPE }
+```
+
+Out:
+
+```js
+// @flow
+import type { HOGE_TYPE, FUGA_TYPE } from './actionTypes';
+
+export const HOGE: HOGE_TYPE = 'hoge/HOGE_ACTION';
+export const FUGA: FUGA_TYPE = 'fuga/FUGA_ACTION';"
+```
+
 
 ## Usage
 
