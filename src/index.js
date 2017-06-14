@@ -2,6 +2,7 @@
 import * as t from 'babel-types'
 import template from 'babel-template'
 import syntaxFlow from 'babel-plugin-syntax-flow'
+import { removeFlowComment } from 'babel-add-flow-comments'
 
 const CREATE_REDUX_ACTION_TYPE = Symbol('CREATE_REDUX_ACTION_TYPE')
 
@@ -61,18 +62,6 @@ function generateVariable({ node }, state) {
   )
 }
 
-function removeComments(comments /* : Array<Object> */) {
-  const FLOW_DIRECTIVE = '@flow'
-  for (const comment of comments) {
-    if (comment.value.indexOf(FLOW_DIRECTIVE) >= 0) {
-      comment.value = comment.value.replace(FLOW_DIRECTIVE, '')
-      if (!comment.value.replace(/\*/g, '').trim()) {
-        comment.ignore = true
-      }
-    }
-  }
-}
-
 export default () => {
   return {
     inherits: syntaxFlow,
@@ -82,7 +71,7 @@ export default () => {
     visitor: {
       Program: {
         exit(path /* : Object */, { opts, file } /* : Object */) {
-          removeComments(file.ast.comments)
+          removeFlowComment(file.ast.comments)
           const map /* :FileMap */ = file.get(CREATE_REDUX_ACTION_TYPE)
 
           const specifiers = []

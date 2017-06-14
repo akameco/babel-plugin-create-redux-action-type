@@ -34,6 +34,7 @@
     "redux-action"
   ],
   "dependencies": {
+    "babel-add-flow-comments": "^0.1.1",
     "babel-plugin-syntax-flow": "^6.18.0",
     "babel-template": "^6.25.0",
     "babel-types": "^6.25.0"
