@@ -1,5 +1,7 @@
 # babel-plugin-create-redux-action-type [![Build Status](https://travis-ci.org/akameco/babel-plugin-create-redux-action-type.svg?branch=master)](https://travis-ci.org/akameco/babel-plugin-create-redux-action-type)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akameco/babel-plugin-create-redux-action-type.svg)](https://greenkeeper.io/)
+
 > create redux action type constants
 
 
